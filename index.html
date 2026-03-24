@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Name | Software Engineer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <div>
+                <h1>Your Name</h1>
+                <h2>Software Engineer</h2>
+                <p>I build high-performance distributed systems and intuitive real-time applications.</p>
+                
+                <nav id="side-nav">
+                    <ul>
+                        <li><a href="#about" class="active">About</a></li>
+                        <li><a href="#experience">Experience</a></li>
+                        <li><a href="#projects">Projects</a></li>
+                    </ul>
+                </nav>
+            </div>
+
+            <div class="social-links">
+                <a href="#" target="_blank">GitHub</a>
+                <a href="#" target="_blank">LinkedIn</a>
+                <a href="#" target="_blank">Twitter</a>
+            </div>
+        </header>
+
+        <main>
+            <section id="about">
+                <h2 class="section-title">About</h2>
+                <p class="about-text">
+                    I'm a Computer Science student focused on the intersection of <strong>distributed systems</strong> and <strong>full-stack development</strong>. My passion lies in building tools that make complex data interactions feel seamless and real-time.
+                </p>
+                <p class="about-text">
+                    Whether it's optimizing database queries or crafting fluid user interfaces, I enjoy solving problems that improve how people interact with technology.
+                </p>
+            </section>
+
+            <section id="experience">
+                <h2 class="section-title">Experience</h2>
+                
+                <div class="card experience-card">
+                    <div class="card-header">
+                        <h3>Software Engineering Intern <span>Gettysburg College</span></h3>
+                        <span class="date">May — Aug 2025</span>
+                    </div>
+                    <p>Building AI-powered coding tutors and educational tools for computer science students. Implementing SSE for real-time model communication.</p>
+                    <div class="tags">
+                        <span class="tag">React</span>
+                        <span class="tag">Java</span>
+                        <span class="tag">LLMs</span>
+                        <span class="tag">SSE</span>
+                    </div>
+                </div>
+
+                <div class="card experience-card">
+                    <div class="card-header">
+                        <h3>Teaching Assistant <span>CS Department</span></h3>
+                        <span class="date">2023 — 2024</span>
+                    </div>
+                    <p>Mentoring 60+ students in Python and Object-Oriented Programming. Improved average lab scores by 25% through personalized tutoring.</p>
+                    <div class="tags">
+                        <span class="tag">Python</span>
+                        <span class="tag">OOP</span>
+                        <span class="tag">Mentoring</span>
+                    </div>
+                </div>
+            </section>
+
+            <section id="projects">
+                <h2 class="section-title">Projects</h2>
+
+                <div class="card project-card"
+                    onclick="window.open('https://github.com/EthanNguyen2107/Telecom-Customer-Churn-Prediction/blob/main/Project%20Report.pdf')""
+                >
+                    <div class="card-content">
+                        <div class="card-header">
+                            <h3>Telecom Customer Churn Prediction</h3>
+                        </div>
+                        <p>A real-time collaborative code editor in the browser supporting seamless pair programming. Features operational transformation for conflict resolution.</p>
+                        <div class="tags">
+                            <span class="tag">TypeScript</span>
+                            <span class="tag">Redis</span>
+                            <span class="tag">WebSockets</span>
+                            <span class="tag">AWS</span>
+                        </div>
+                    </div>
+                    <div class="card-image">
+                        <img src="assets/1710210933336.jpeg" alt="Screenshot of CodeCafé browser interface">
+                    </div>
+                </div>
+
+                <div class="card project-card">
+                    <div class="card-content">
+                        <div class="card-header">
+                            <h3>Gedis</h3>
+                        </div>
+                        <p>High-performance Redis implementation built from scratch in Go. Implemented custom B-trees and handled 10k+ concurrent connections.</p>
+                        <div class="tags">
+                            <span class="tag">Go</span>
+                            <span class="tag">TCP Sockets</span>
+                            <span class="tag">B-trees</span>
+                            <span class="tag">Concurrency</span>
+                        </div>
+                    </div>
+                    <div class="card-image">
+                        <img src="images/gedis.png" alt="Terminal output of Gedis high performance database">
+                    </div>
+                </div>
+
+                <p style="margin-top: 2rem;"><a href="#" class="resume-link">View full resume →</a></p>
+            </section>
+        </main>
+    </div>
+
+    <script>
+        const sections = document.querySelectorAll("section");
+        const navLinks = document.querySelectorAll("nav ul li a");
+
+        window.addEventListener("scroll", () => {
+            let current = "";
+            sections.forEach((section) => {
+                const sectionTop = section.offsetTop;
+                if (pageYOffset >= sectionTop - 120) {
+                    current = section.getAttribute("id");
+                }
+            });
+
+            navLinks.forEach((link) => {
+                link.classList.remove("active");
+                if (link.getAttribute("href").includes(current)) {
+                    link.classList.add("active");
+                }
+            });
+        });
+    </script>
+</body>
+</html>
