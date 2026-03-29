@@ -1,22 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ethan Nguyen | Quantitative Portfolio</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ethan Nguyen | Portfolio</title>
+    <link rel="stylesheet" href="style.css" />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Source+Serif+4:wght@400;500;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
     <div class="container">
         <header>
-            <div>
+            <div class="sidebar-top">
+                <div class="profile-photo-wrap">
+                    <img src="/assets/E44496CD-35F1-47A5-B1F2-20F6B9EC937B_1_102_o.jpeg" alt="Portrait of Ethan Nguyen" class="profile-photo">
+                </div>
+
                 <h1>Ethan Nguyen</h1>
                 <h2>Data Analytics & Economics</h2>
-                
+
                 <div class="interest-stack">
                     <div class="interest-label">Career Interests</div>
                     <div class="interest-items">
@@ -25,7 +26,7 @@
                         <div>Data-Driven Decision Making</div>
                     </div>
                 </div>
-                
+
                 <nav id="side-nav">
                     <ul>
                         <li><a href="#about" class="active">About</a></li>
@@ -44,17 +45,18 @@
 
             <div class="social-links">
                 <a href="https://linkedin.com/in/ethannguyen8417325210704" target="_blank">LINKEDIN</a>
+                <a href="assets/Ethan Nguyen Resume.pdf" target="_blank">VIEW FULL RESUME</a>
             </div>
         </header>
 
         <main>
             <section id="about">
                 <h2 class="section-title">About</h2>
-                
+
                 <p class="about-text">
                     Hi, I’m Thanh Nguyen, and I go by Ethan. I took the name from Ethan Hunt in <i>Mission: Impossible</i>, a character I’ve always admired for his persistence, calm under pressure, and refusal to give up. It reminds me of who I want to be.
                 </p>
-                
+
                 <p class="about-text">
                     I work across data analytics and economic research. My experience spans operational and customer analytics at PSECU, business analysis in banking, and independent research on financial markets, regulation, and monetary policy.
                 </p>
@@ -62,26 +64,100 @@
 
             <section id="experience">
                 <h2 class="section-title">Experience</h2>
-                
-                <div class="card experience-card" onclick="window.open('https://www.linkedin.com/company/psecu/posts/?feedView=all')">
+                <p class="about-text">
+                    A journey where I learned how to turn business questions into practical data solutions and communicate well across environments
+                </p>
+            
+                <div class="card experience-card psecu-card">
                     <div class="card-content">
                         <div class="card-header">
-                            <h3>Pennsylvania State Employees Credit Union<span>Data Analyst Intern</span></h3>
+                            <h3>Pennsylvania State Employees Credit Union <span>Data Analyst Intern</span></h3>
                             <span class="date">June 2024 — Present</span>
                         </div>
-                        <ul class="card-bullets">
-                            <li>Identified a system error through SQL analysis of 54,000 loan closures to fix a high-volume processing issue.</li>
-                            <li>Automated HR attendance tracking using Power BI and SQL with dimensional modeling to process 200,000+ badge swipes, cutting review time by 80%.</li>
-                            <li>Built Net Promoter Score dashboard in Power BI providing MTD/QTD/YTD and sentiment context insights to support leadership KPI reviews.</li>
+                
+                      
+                
+                        <ul class="card-bullets featured-bullets">
+                            <li>Identified a system error through SQL analysis of 54,000 loan closures, helping fix a high-volume processing issue.</li>
+                            <li>Automated HR Onsite Adherence Dashboard using Power BI and SQL with dimensional modeling to process 200,000+ badge swipes, cutting review time by 80%.</li>
+                            <li>Built Net Promoter Score Dashboard in Power BI providing MTD/QTD/YTD and sentiment context insights to support leadership KPI reviews.</li>
                             <li>Extracted member interaction data, engineered call-intent features in SQL and developed a Python ML model to predict call volume, reducing customer wait time 18%.</li>
-                            <li>Validated 400+ staging tables using SQL and Excel benchmarking to ensure 100% data consistency across Azure and on-premise databases.</li>
                         </ul>
+                        
+                        <button class="areas-toggle" type="button" aria-expanded="false">
+                            More Work by area
+                        </button>
+                        
+                        <div class="psecu-areas-wrap">
+                            <div class="psecu-area-grid">
+                                <button class="area-card" type="button" data-area="adhoc">Ad hoc research</button>
+                                <button class="area-card" type="button" data-area="reporting">Reporting</button>
+                                <button class="area-card" type="button" data-area="analysis">Analysis</button>
+                                <button class="area-card" type="button" data-area="infrastructure">Infrastructure</button>
+                                <button class="area-card" type="button" data-area="advanced-analytics">Advanced analytics</button>
+                                <button class="area-card" type="button" data-area="advanced-features">Advanced features</button>
+                            </div>
+                        
+                            <div class="psecu-detail-panels">
+                                <div class="area-panel" data-panel="adhoc">
+                                    <div class="experience-section-title">Ad hoc research</div>
+                                    <ul class="card-bullets section-bullets">
+                                        <li>Identified a system error through SQL analysis of 54,000 loan closures, helping fix a high-volume processing issue.</li>
+                                    </ul>
+                                </div>
+                        
+                                <div class="area-panel" data-panel="reporting">
+                                    <div class="experience-section-title">Reporting</div>
+                                    <ul class="card-bullets section-bullets">
+                                        <li>Automated HR Onsite Adherence Dashboard using Power BI and SQL with dimensional modeling to process 200,000+ badge swipes, cutting review time by 80%.</li>
+                                        <li>Built Net Promoter Score Dashboard in Power BI providing MTD/QTD/YTD and sentiment context insights to support leadership KPI reviews.</li>
+                                        <li>Created Data Validation Report to flag recurring data quality issues, improving daily review time by 30%.</li>
+                                        <li>Developed User Entering Time Report to track monthly timecard submission rates, helping managers monitor time-entry performance.</li>
+                                    </ul>
+                                </div>
+                        
+                                <div class="area-panel" data-panel="analysis">
+                                    <div class="experience-section-title">Analysis</div>
+                                    <ul class="card-bullets section-bullets">
+                                        <li>Analyzed SSRS report usage using Excel pivot tables to identify unused reports in H1 2024 for the Enterprise Project Management Office inventory.</li>
+                                        <li>Tracked Insight Portal usage using Power BI across C-suite, AVP, and VP groups to support adoption review.</li>
+                                    </ul>
+                                </div>
+                        
+                                <div class="area-panel" data-panel="infrastructure">
+                                    <div class="experience-section-title">Infrastructure</div>
+                                    <ul class="card-bullets section-bullets">
+                                        <li>Validated 400+ staging tables using SQL and Excel benchmarking to ensure 100% data consistency across Azure and on-premise databases.</li>
+                                    </ul>
+                                </div>
+                        
+                                <div class="area-panel" data-panel="advanced-analytics">
+                                    <div class="experience-section-title">Advanced analytics</div>
+                                    <ul class="card-bullets section-bullets">
+                                        <li>Developed Python package installation workflows with security-compliant shared .whl repositories for 30+ analysts, cutting technical onboarding time by 70%.</li>
+                                        <li>Built a Python automation to scan CRAN package URLs and generate a version inventory to streamline R package maintainance.</li>
+                                        <li>Extracted member interaction data, engineered call-intent features in SQL, and developed a Python ML model to predict call volume, reducing customer wait time 18%.</li>
+                                    </ul>
+                                </div>
+                        
+                                <div class="area-panel" data-panel="advanced-features">
+                                    <div class="experience-section-title">Advanced features</div>
+                                    <ul class="card-bullets section-bullets">
+                                        <li>Tested Microsoft Fabric AutoML, Power BI Copilot, and Graph Analytics semantic models through ad hoc research to evaluate their fit for operational workflows and future enterprise adoption.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                
                         <div class="tags">
                             <span class="tag">SQL</span><span class="tag">Python</span><span class="tag">Power BI</span><span class="tag">Excel</span>
                             <span class="tag">Azure</span><span class="tag">Fabric</span>
                         </div>
                     </div>
-                    <div class="card-image"><img src="assets/psecu logo.png" alt="PSECU"></div>
+                
+                    <div class="card-image">
+                        <img src="assets/psecu logo.png" alt="PSECU">
+                    </div>
                 </div>
 
                 <div class="card experience-card" onclick="window.open('https://www.linkedin.com/company/techx-corporation/')">
@@ -90,13 +166,16 @@
                             <h3>TechX Corp. <span>Business Analyst Intern</span></h3>
                             <span class="date">May 2023 — Aug 2023</span>
                         </div>
+
+               
                         <ul class="card-bullets">
-                            <li>Segmented customer profiles to design targeted loan product recommendations using Customer Lifetime Value analysis, supporting 10% market penetration growth for HD Bank. </li>
+                            <li>Segmented customer profiles to design targeted loan product recommendations using Customer Lifetime Value analysis, supporting 10% market penetration growth for HD Bank.</li>
                             <li>Designed 9 entity-relationship diagrams using Visio from the client’s canonical data model to standardize member, account, and transaction definitions across teams.</li>
                         </ul>
+
                         <div class="tags">
                             <span class="tag">Customer Segmentation</span><span class="tag">CLV Analysis</span>
-                            <span class="tag">Loan Product Proposal</span><span class="tag">SQL</span>
+                            <span class="tag">Loan Product Proposal</span><span class="tag">PowerPoint</span>
                         </div>
                     </div>
                     <div class="card-image"><img src="assets/techx_corporation_logo.jpeg" alt="TechX"></div>
@@ -109,7 +188,9 @@
                             <span class="date">Jan 2024 — May 2024</span>
                         </div>
                         <p>Provided weekly office hours to support students in Calculus and other 100-level quantitative courses.</p>
-                        <div class="tags"><span class="tag">Calculus</span><span class="tag">Mentoring</span><span class="tag">Tutoring</span></div>
+                        <div class="tags">
+                            <span class="tag">Calculus</span><span class="tag">Mentoring</span><span class="tag">Tutoring</span>
+                        </div>
                     </div>
                     <div class="card-image"><img src="/assets/images-2.jpeg" alt="Math"></div>
                 </div>
@@ -120,7 +201,7 @@
                             <h3>Gettysburg College Admissions <span>International Student Ambassador</span></h3>
                             <span class="date">Jan 2023 — May 2024</span>
                         </div>
-                        <p>Representing the college through personalized panels and recruitment initiatives for prospective international students.</p>
+                        <p>Represented the college through online panels and recruitment initiatives for prospective international students.</p>
                         <div class="tags">
                             <span class="tag">Communication</span><span class="tag">Content Creation</span>
                             <span class="tag">Public Speaking</span>
@@ -132,10 +213,14 @@
 
             <section id="projects">
                 <h2 class="section-title">Projects</h2>
+                <p class="about-text">
+                    A mix of selected technical and research work applied to real business and market questions
+                </p>
+            
 
                 <h3 id="data-projects" class="subsection-title">Data Analytics</h3>
-                
-                <div class="card project-card" onclick="window.open('https://github.com/EthanNguyen2107/Telecom-Customer-Churn-Prediction')">
+
+                <div class="card project-card" onclick="window.open('https://github.com/EthanNguyen2107/NguyenMwinjuma_Business_Telecom_Customers_Churn')">
                     <div class="card-content">
                         <div class="card-header">
                             <h3>Telecom Customer Churn Prediction</h3>
@@ -150,9 +235,7 @@
                     <div class="card-image"><img src="/assets/Feature_Correlation_Matrix.pdf" alt="Churn"></div>
                 </div>
 
-                
-
-                <div class="card project-card" onclick="window.open('https://github.com/EthanNguyen2107/U.S.-Counties-Air-Pollution-Analysis-')">
+                <div class="card project-card" onclick="window.open('https://github.com/EthanNguyen2107/US-Counties-Air-Pollution-Analysis')">
                     <div class="card-content">
                         <div class="card-header">
                             <h3>U.S. Counties Air Pollution Analysis</h3>
@@ -164,7 +247,7 @@
                             <span class="tag">Matplotlib</span><span class="tag">Data Wrangling</span>
                         </div>
                     </div>
-                    <div class="card-image"><img src="/assets/US Pollution.png" alt="Pollution"></div>
+                    <div class="card-image"><img src="assets/US Pollution.png" alt="Pollution"></div>
                 </div>
 
                 <div class="card project-card" onclick="window.open('https://github.com/EthanNguyen2107/Trucks-Accident-Risk-Analysis')">
@@ -173,7 +256,7 @@
                             <h3>Trucks Accident Risk Analysis</h3>
                             <span class="date">Dec 2023</span>
                         </div>
-                        <p>Analyzed accident data to identify primary causes and provide safety-driven business insights.</p>
+                        <p>Analyzed accident data to identify primary causes and provide safety-focused business insights.</p>
                         <div class="tags">
                             <span class="tag">R</span><span class="tag">EDA</span>
                             <span class="tag">ggplot2</span><span class="tag">dplyr</span>
@@ -198,6 +281,7 @@
                     </div>
                     <div class="card-image"><img src="/assets/Stocks Paper.pdf" alt="Retail"></div>
                 </div>
+ 
 
                 <div class="card project-card" onclick="window.open('/assets/Durbin Amendment Paper.pdf')">
                     <div class="card-content">
@@ -233,7 +317,10 @@
 
             <section id="leadership">
                 <h2 class="section-title">Leadership</h2>
-                
+                <p class="about-text">
+                    These experiences taught me ownership, humility, and the importance of having a mission beyond myself
+                </p>
+
                 <div class="card experience-card" onclick="window.open('https://www.facebook.com/profile.php?id=100064281206159')">
                     <div class="card-content">
                         <div class="card-header">
@@ -262,7 +349,7 @@
     <script>
         const targets = document.querySelectorAll("section, .subsection-title");
         const navLinks = document.querySelectorAll("nav a");
-
+    
         window.addEventListener("scroll", () => {
             let current = "";
             targets.forEach((target) => {
@@ -271,11 +358,49 @@
                     current = target.getAttribute("id");
                 }
             });
-
+    
             navLinks.forEach((link) => {
                 link.classList.remove("active");
-                if (link.getAttribute("href").includes(current)) {
+                if (current && link.getAttribute("href").includes(current)) {
                     link.classList.add("active");
+                }
+            });
+        });
+    
+        const areasToggle = document.querySelector(".areas-toggle");
+        const areasWrap = document.querySelector(".psecu-areas-wrap");
+        const areaCards = document.querySelectorAll(".area-card");
+        const areaPanels = document.querySelectorAll(".area-panel");
+    
+        if (areasToggle && areasWrap) {
+            areasToggle.addEventListener("click", () => {
+                const isOpen = areasWrap.classList.toggle("is-open");
+                areasToggle.classList.toggle("is-open", isOpen);
+                areasToggle.setAttribute("aria-expanded", isOpen ? "true" : "false");
+    
+                if (!isOpen) {
+                    areaCards.forEach((btn) => btn.classList.remove("active"));
+                    areaPanels.forEach((panel) => panel.classList.remove("is-open"));
+                }
+            });
+        }
+    
+        areaCards.forEach((card) => {
+            card.addEventListener("click", (event) => {
+                event.stopPropagation();
+    
+                const selectedArea = card.dataset.area;
+                const isAlreadyActive = card.classList.contains("active");
+    
+                areaCards.forEach((btn) => btn.classList.remove("active"));
+                areaPanels.forEach((panel) => panel.classList.remove("is-open"));
+    
+                if (!isAlreadyActive) {
+                    card.classList.add("active");
+                    const activePanel = document.querySelector(`.area-panel[data-panel="${selectedArea}"]`);
+                    if (activePanel) {
+                        activePanel.classList.add("is-open");
+                    }
                 }
             });
         });
