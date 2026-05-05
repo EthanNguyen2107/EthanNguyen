@@ -374,6 +374,37 @@ section {
     display: block;
 }
 
+/* LEADERSHIP CARDS */
+.leadership-card {
+    cursor: pointer;
+}
+
+.leadership-card .card-content p {
+    margin-bottom: 0.75rem;
+}
+
+.leadership-impact {
+    margin-top: 0.15rem;
+}
+
+.leadership-photo-grid {
+    margin-top: 1rem;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.65rem;
+    width: 100%;
+}
+
+.leadership-photo-grid img {
+    width: 100%;
+    height: 155px;
+    object-fit: cover;
+    border-radius: 12px;
+    border: 1px solid var(--card-border);
+    background: #f7f4ef;
+    display: block;
+}
+
 /* TAGS */
 .tags {
     display: flex;
@@ -581,10 +612,15 @@ section {
     .psecu-area-grid {
         grid-template-columns: 1fr 1fr;
     }
+
+    .leadership-photo-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .leadership-photo-grid img {
+        height: 140px;
+    }
 }
-
-
-
 
 @media (max-width: 620px) {
     body {
@@ -602,5 +638,13 @@ section {
     .social-links a {
         font-size: 0.72rem;
         padding: 0.7rem 0.9rem;
+    }
+
+    .leadership-photo-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .leadership-photo-grid img {
+        height: 190px;
     }
 }
